@@ -3,6 +3,10 @@ public class MyArrays{
   {
     int[] nums = new int[]{1,2,3,4,5};
     System.out.println(arrayToString(nums));
+	int[] anArray = new int[] {1,2,3,4,5};
+	System.out.println("Address for original array: " + anArray);
+	System.out.println("address for copy array: " + returnCopy(anArray));
+	System.out.println("Check for equal addresses: " + (anArray == returnCopy(anArray)));
   }
   public static String arrayToString(int[] nums)
   {
