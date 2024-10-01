@@ -48,7 +48,7 @@ public class ArrayMethods{
 		  }
 	  }
     //use a nested loop to solve this
-    return sum;//place holder return value so it compiles.
+    return sum;
   }
 
   /**Rotate an array by returning a new array with the rows and columns swapped.
