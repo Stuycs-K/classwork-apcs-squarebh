@@ -80,7 +80,33 @@ public class ArrayDemo{
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
   public static int[][] copy(int[][] nums){
-    return new int[1][1];
+    int rows = nums.length;
+	  int columns = 0;
+	  for (int i = 0; i < nums.length ; i++)
+	  {
+		  if (nums[i].length > columns)
+		  {
+			  columns = nums[i].length;
+		  }
+	  }
+	  int[][] newArray = new int[rows][columns];
+	  for ( int i = 0; i < rows; i ++)
+	  {
+		  int index = nums[i].length;
+		  if ( columns > index)
+			  {
+				  newArray[i] = new int[index];
+			  }
+		  for (int x = 0; x < columns; x ++)
+		  {
+			  if ( x > index - 1)
+			  {
+				  break;
+			  }
+			  newArray[i][x] = nums[i][x];
+		  }
+	  }
+    return newArray;
   }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
