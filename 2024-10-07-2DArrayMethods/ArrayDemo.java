@@ -1,6 +1,8 @@
 import java.util.Arrays;
 public class ArrayDemo{
   public static void main(String[]args){
+    int[][] testZero = new int[3][5];
+    System.out.println (countZeros2D(testZero));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
@@ -11,9 +13,9 @@ public class ArrayDemo{
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
     String str = "[";
-    for (int i = 0;i<nums.length;i++){
-      str+=nums[i];
-      if (i<nums.length-1){
+    for (int i = 0;i<ary.length;i++){
+      str+=ary[i];
+      if (i<ary.length-1){
         str += ", ";
       }
     }
@@ -36,7 +38,16 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int count = 0;
+    for(int i = 0; i < nums.length; i ++)
+    {
+      for ( int b = 0; b< nums[i].length;b++)
+      {
+        if (nums[i][b] == 0);
+        count += 1;
+      }
+    }
+    return count;
   }
 
   //2. Calculate the sum of a 2d array
@@ -54,7 +65,7 @@ public class ArrayDemo{
     //use a nested loop to solve this
     return sum;
   }
-
+/*
   //3. Modify a given 2D array of integer as follows:
   //Replace all the negative values:
   //-When the row number is the same as the column number replace
@@ -73,7 +84,7 @@ public class ArrayDemo{
     }
       return vals;
   }
-
+*/
   //4. Make a copy of the given 2d array.
   //When testing : make sure that changing the original does NOT change the copy.
   //DO NOT use any built in methods that "copy" an array.
