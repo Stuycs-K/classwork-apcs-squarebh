@@ -144,13 +144,13 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-	  String newString = arrToString(int[][]nums)
+	  String newString = arrToString(nums);
 	  String htmlString = "<table><tr>";
-	  for (int i = 0; i < newString.length;i++;)
+	  for (int i = 0; i < newString.length();i++)
 	  {
 		  if (Character.isDigit(newString.charAt(i)))
 		  {
-			  htmlString = "<td>" + newString(i) + "</td>";
+			  htmlString = htmlString + "<td>" + newString(i) + "</td>";
 		  }
 	  }
     return htmlString + "</tr></table>";
