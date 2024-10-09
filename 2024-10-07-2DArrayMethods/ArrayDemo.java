@@ -67,13 +67,13 @@ public class ArrayDemo{
     //use a nested loop to solve this
     return sum;
   }
-/*
+
   //3. Modify a given 2D array of integer as follows:
   //Replace all the negative values:
   //-When the row number is the same as the column number replace
   //that negative with the value 1
   //-All other negatives replace with 0
-  public static void replaceNegative(int[][] vals){
+  public static int[][] replaceNegative(int[][] vals){
     for (int i = 0; i<vals.length;i++){
       for(int j = 0; j<vals[i].length;j++){
         if (0>vals[i][j]){
@@ -86,7 +86,7 @@ public class ArrayDemo{
     }
       return vals;
   }
-*/
+
   //4. Make a copy of the given 2d array.
   //When testing : make sure that changing the original does NOT change the copy.
   //DO NOT use any built in methods that "copy" an array.
