@@ -150,7 +150,7 @@ public class ArrayDemo{
 	  {
 		  if (Character.isDigit(newString.charAt(i)))
 		  {
-			  htmlString = htmlString + "<td>" + newString(i) + "</td>";
+			  htmlString = htmlString + "<td>" + newString.substring(i,i+1) + "</td>";
 		  }
 	  }
     return htmlString + "</tr></table>";
