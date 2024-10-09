@@ -3,6 +3,8 @@ public class ArrayDemo{
   public static void main(String[]args){
     int[][] testZero = new int[3][5];
     System.out.println (countZeros2D(testZero));
+	int[][] testHTML = new int[][] {{1,2},{3,4}};
+	System.out.println (htmlTable(testHTML));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
