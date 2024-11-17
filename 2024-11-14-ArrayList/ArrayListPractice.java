@@ -6,7 +6,7 @@ public class ArrayListPractice{
     {
       double tem = 11*Math.random();
       int temp = (int)(tem);
-      System.out.println(tem);
+      //System.out.println(tem);
       res.add("" + temp);
       if (res.get(i).equals("0"))
       {
@@ -26,11 +26,23 @@ public class ArrayListPractice{
     }
   }
 }
+public static ArrayList<String> makeReversedList( ArrayList<String> original){
+  //return a new ArrayList that is in the reversed order of the original.
+  ArrayList<String> test2 = new ArrayList<String>(original.size());
+  for (int i = original.size()-1; i >= 0; i --)
+  {
+    test2.add(original.get(i));
+  }
+  return test2;
+} 
   public static void main(String[] args)
   {
     ArrayList<String> test1 = createRandomArray((int)(12*Math.random()));
     System.out.println(createRandomArray(5));
     replaceEmpty(test1);
     System.out.println(test1);
+    ArrayList<String> test2 = createRandomArray((int)(12*Math.random()));
+    System.out.println(test2);
+    System.out.println(makeReversedList(test2));
   }
 }
