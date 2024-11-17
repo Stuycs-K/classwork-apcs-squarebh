@@ -88,5 +88,9 @@ public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String
     System.out.println(makeReversedList(test4));
     System.out.println(makeReversedList(test5));
     System.out.println(mixLists(makeReversedList(test4), makeReversedList(test5)));
+    ArrayList<String> test6 = createRandomArray(20000);
+    System.out.println(test6);
+    replaceEmpty(test6);
+    System.out.println(test6);
   }
 }
