@@ -8,71 +8,52 @@ public class Driver
     try{
       int totalVer = 0;
       int totalHor = 0;
-      int counter = 1;
-      int countL = 0;
-      int countR = 0;
+      int direction  = 0;
       File file = new File(filename);//1
       Scanner input = new Scanner(file);
-      
-      
+
+
       while(input.hasNext())
       {
         String hold = input.next();
-        if (counter % 2 == 1)
+        int totalBlocks = Integer.parseInt(hold.substring(1,hold.length()-1));
+        if(hold.substring(0,1).equals("R"))
         {
-          if (countR == 2 || countL == 2)
-          {
-            totalHor = totalHor - Integer.parseInt(hold.substring(1,hold.length()-1));
-            if (hold.substring(0,1).equals("R")){countR += 1;}
-          else{
-          countL = 0;
-          }
-          counter += 1;
-          }
-          else if (hold.substring(0,1).equals("R")){
-          totalHor = totalHor + Integer.parseInt(hold.substring(1,hold.length()-1));
-          countR += 1;
-          countL = 0;
-          counter += 1;
-          }
-          else if (hold.substring(0,1).equals("L")){
-            totalHor = totalHor - Integer.parseInt(hold.substring(1,hold.length()-1));
-            countR = 0;
-            countL +=1;
-            counter += 1;
-          }
+          direction += 1;
         }
-        else 
+        else{direction -= 1;}
+        if(direction == -1)
         {
-          if (countR == 2 || countL == 2)
-          {
-            totalVer = totalVer - Integer.parseInt(hold.substring(1,hold.length()-1));
-            if (hold.substring(0,1).equals("R")){countR += 1;}
-            else{
-            countL = 0;
-            }
-          counter += 1;
-          }
-          else if (hold.substring(0,1).equals("R")){
-          totalVer = totalVer + Integer.parseInt(hold.substring(1,hold.length()-1));
-          countR += 1;
-          countL = 0;
-          counter += 1;
-          }
-          else if (hold.substring(0,1).equals("L")){
-            totalVer = totalVer + Integer.parseInt(hold.substring(1,hold.length()-1));
-            countR = 0;
-            countL += 1;
-            counter += 1;
-            }
+          direction = 3;
         }
-        
+        if (direction == 5)
+        {
+          direction = 1;
+        }
+        if (direction % 4 == 0)
+        {
+          totalVer += totalBlocks;
+        }
+        if (direction % 4 == 1)
+        {
+          totalHor += totalBlocks;
+        }
+        if (direction % 4 == 2)
+        {
+          totalVer -= totalBlocks;
+        }
+        if (direction % 4 == 3)
+        {
+          totalVer -= totalBlocks;
+        }
+
+
       }
       input.close();
-      
-   
+
+
       return Math.abs(totalHor) + Math.abs(totalVer);
-      
+
     }
     catch (FileNotFoundException ex) {
         //File not found what should you do?
