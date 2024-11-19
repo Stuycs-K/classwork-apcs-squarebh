@@ -16,7 +16,6 @@ public class Driver
       while(input.hasNext())
       {
         String hold = input.next();
-        int totalBlocks = Integer.parseInt(hold.substring(1,hold.length()-1));
         if(hold.substring(0,1).equals("R"))
         {
           direction += 1;
@@ -32,19 +31,19 @@ public class Driver
         }
         if (direction % 4 == 0)
         {
-          totalVer += totalBlocks;
+          totalVer += Integer.parseInt(hold.substring(1,hold.length()-1));
         }
         if (direction % 4 == 1)
         {
-          totalHor += totalBlocks;
+          totalHor += Integer.parseInt(hold.substring(1,hold.length()-1));
         }
         if (direction % 4 == 2)
         {
-          totalVer -= totalBlocks;
+          totalVer -= Integer.parseInt(hold.substring(1,hold.length()-1));
         }
         if (direction % 4 == 3)
         {
-          totalVer -= totalBlocks;
+          totalHor -= Integer.parseInt(hold.substring(1,hold.length()-1));
         }
 
 
