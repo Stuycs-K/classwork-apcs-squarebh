@@ -3,8 +3,17 @@ public class ColorDemo{
   public static final String HIDE_CURSOR =  "\u001b[?25l";
   public static final String SHOW_CURSOR =  "\u001b[?25h";
   public static void main(String[] args)
+  
   {
-    System.out.println("\u001b[36mJosh Allen MVP");
+    System.out.println("\u001b[0m");
+    System.out.println("\u001b[48;2;255;0;0m");
+    System.out.println("\u001b[48;2;255;127;0m");
+    System.out.println("\u001b[48;2;255;255;0m");
+    System.out.println("\u001b[48;2;0;255;0m");
+    System.out.println("\u001b[48;2;0;0;255m");
+    System.out.println("\u001b[48;2;75;0;130");
+    System.out.println("\u001b[48;2;148;0;211m");
+    //System.out.println("\u001b[36mJosh Allen MVP");
     /*
     for(int r = 0; r < 256; r+=32){
       for(int g = 0; g <= 256; g+=32){
