@@ -95,8 +95,54 @@ public static final String RESET = "\033[0m"+SHOW_CURSOR;
     Text.color(BLUE, Text.background(BLUE));
     for (int i = 0; i < 80; i++)
     { 
-      System.out.print(".");
+      System.out.print("+");
     }
+    Text.go(15,15);
+    System.out.print("\u001b[37;1m.");
+    Text.go(16,15);
+    System.out.print("\u001b[37;1m.");
+    Text.go(17,15);
+    System.out.print("\u001b[37;1m.");
+    Text.go(17,16);
+    System.out.print("\u001b[37;1m.");
+    Text.go(18,15);
+    System.out.print("\u001b[37;1m.");
+    Text.go(19,15);
+    System.out.print("\u001b[37;1m.");
+    Text.go(15,17);
+    System.out.print("\u001b[37;1m.");
+    Text.go(16,17);
+    System.out.print("\u001b[37;1m.");
+    Text.go(17,17);
+    System.out.print("\u001b[37;1m.");
+    Text.go(18,17);
+    System.out.print("\u001b[37;1m.");
+    Text.go(19,17);
+    System.out.print("\u001b[37;1m.");
+
+
+
+    Text.go(15,20);
+    System.out.print("\u001b[37;1m.");
+    Text.go(16,20);
+    System.out.print("\u001b[37;1m.");
+    Text.go(17,20);
+    System.out.print("\u001b[37;1m.");
+    Text.go(18,20);
+    System.out.print("\u001b[37;1m.");
+    Text.go(19,20);
+    System.out.print("\u001b[37;1m.");
+
+
+    Text.go(15,25);
+    System.out.print("\u001b[37;1m.");
+    Text.go(16,25);
+    System.out.print("\u001b[37;1m.");
+    Text.go(17,25);
+    System.out.print("\u001b[37;1m.");
+    
+    Text.go(19,25);
+    System.out.print("\u001b[37;1m.");
     Text.go(31,1);
     System.out.println(RESET);
     
