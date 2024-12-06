@@ -3,10 +3,14 @@ public class Warrior extends Adventurer{
     public Warrior(String name)
     {
         super(name);
+        this.rage = 10;
+        this.maxRage = 20;
     }
     public Warrior (String name, int hp)
     {
         super(name,hp);
+        this.rage = 10;
+        this.maxRage = 20;
     }
     public  String getSpecialName(){
         return "rage";
