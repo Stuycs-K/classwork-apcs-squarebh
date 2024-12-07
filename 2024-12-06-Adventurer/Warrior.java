@@ -33,22 +33,27 @@ public class Warrior extends Adventurer{
   //hurt or hinder the target adventurer
   
   public  String attack(Adventurer other){
-    return "";
+    other.applyDamage(5);
+    return this.getName() + " dealt 5 damge to " + other.getName();
   }
 
   //heall or buff the target adventurer
   public  String support(Adventurer other){
-    return "";
+    other.applyDamage(-5);
+    return this.getName() + " healed 5 damge to " + other.getName();
   }
 
   //heall or buff self
   public  String support(){
-    return "";
+    this.applyDamage(-5);
+    return this.getName() + " healed 5 damge to themselves";
   }
 
   //hurt or hinder the target adventurer, consume some special resource
   public  String specialAttack(Adventurer other)
   {
+    other.applyDamage(10);
+    
     return "";
   }
 
