@@ -35,14 +35,15 @@ public class Warrior extends Adventurer{
   public  String attack(Adventurer other){
     other.applyDamage(5);
     restoreSpecial(2);
-    return this.getName() + " smashed " + other.getName() + " for 5 damage and restored two special" ;
+    return this.getName() + " smashed " + other.getName() + " for 5 damage and restored two special leaving " +
+    this + " with " + this.getSpecial() + " rage and " + other + " with " + other.getHP() + " HP";
   }
 
   //heall or buff the target adventurer
   public  String support(Adventurer other){
     if(other.getHP() < other.getmaxHP() - 5  ){
     other.applyDamage(-5);
-    return this.getName() + " shielded " + other.getName() + " for 5 healing" ;
+    return this.getName() + " shielded " + other.getName() + " for 5 healing leaving " + other + " with " + other.getHP() + " HP" ;
   }
   else{
     other.setHP(other.getmaxHP());
@@ -54,7 +55,7 @@ public class Warrior extends Adventurer{
   public  String support(){
     if(getmaxHP() -5 > getHP()){
     this.applyDamage(-5);
-    return this.getName() + " shielded themselves for 5 healing points";
+    return this.getName() + " shielded themselves for 5 healing points leaving themselves with " + this.getHP() + " HP";
   }
   else{
     setHP(getmaxHP());
@@ -68,7 +69,7 @@ public class Warrior extends Adventurer{
     if(getSpecial() > 3){
     other.applyDamage(10);
     this.setSpecial(this.getSpecial()-3);
-    return "Super smashed " + other.getName() + " but wasted 3 rage";
+    return this +" super smashed " + other.getName() + " but wasted 3 rage leaving " + other + " with " + other.getHP() + " HP";
   }
   else{
     return "Not enough stamina to use special";
